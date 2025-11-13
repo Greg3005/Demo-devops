@@ -16,4 +16,6 @@ jobs:
           --header "Accept: application/json" \
           --header "Content-Type: application/json" \
           --data '{"short_description":"Demo CR from GitHub Actions","category":"Software"}'
+          - name: Show commit message
+          run: echo "${{ github.event.head_commit.message }}"
 
